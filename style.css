@@ -1,0 +1,141 @@
+html {
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
+
+body {
+   margin: 0px;
+   min-height: 100%;
+   width: 100%;
+}
+ASIDE {
+    width: 250px;
+    height: auto;
+
+    top: 1px;
+margin:auto;
+    border: 1px solid #333; 
+    padding: 10px;
+    background: #fff;
+   background: linear-gradient(to bottom, #f2f5f6 0%,#ffffff 1%,#d1d1d1 3%,#e3eaed 68%,#e3eaed 68%,#ffffff 96%,#c8d7dc 100%);
+}
+ASIDE P {
+    margin-left: 20px;
+}
+#mindmap_container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 0.87) 41%, rgba(73, 165, 191, 0.68) 100%);
+    display: block;
+    text-align:center;
+}
+
+div.node {
+    min-width: 120px;
+    min-height: 60px;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px #828282;
+    line-height: 1;
+    text-align: center;
+    border: 1px solid #E8E8E8;
+    font-family: 'Reenie Beanie';
+    background: rgba(255, 255, 136, 0.9);
+    z-index: 1;
+}
+
+div.master {
+    background: transparent;
+    background-color: transparent;
+    content: "";
+    background: url(assets/brain.png);
+    background-position:20px 0;
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 132px;
+    box-shadow: none;
+    border: none;
+    z-index: 1;
+    padding-bottom: 33px;
+    padding-right: 20px;
+}
+
+div.node span {
+    padding: 6px;
+    display: block;
+    max-width: 150px;
+    word-wrap: break-word;
+    margin: 15px 5px 25px 5px;
+    border-bottom: 2px solid #aeadad;
+    border-left: 2px solid #aeadad;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.master_span {
+    content: "";
+    background-color: white;
+    padding: 7px !important;
+    min-width: 180px;
+    position: absolute;
+    bottom: -27px;
+    border: 2px solid #2d2c2c !important;
+    border-radius: 25px !important;
+    box-shadow: 3px 3px 7px #828282;
+    display: none;
+    pointer-events: none;
+}
+
+.hide {
+    transform: translateX(-9999px);
+}
+
+.dragging {
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+canvas {
+    z-index: 0;
+}
+
+.add {
+    position: absolute;
+    display: block;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: url(assets/add.png);
+    text-indent: -99999em;
+    overflow: hidden;
+    bottom: 2px;
+    right: 5px;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.left {
+    left: 5px;
+}
+
+.delete {
+    position: absolute;
+    display: block;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: url(assets/remove.png);
+    text-indent: -99999em;
+    overflow: hidden;
+    bottom: 2px;
+    margin: 0 auto;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
